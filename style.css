@@ -123,6 +123,23 @@ h2 svg {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
+.card-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-logos img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.card-logos img.secondary {
+    height: 40px;
+}
+
 .card:hover {
     border-color: rgba(226, 207, 234, 0.3);
     transform: translateY(-2px);
