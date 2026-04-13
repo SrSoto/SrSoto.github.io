@@ -1,0 +1,167 @@
+:root {
+    --bg-color: #494e5a;       /* Charcoal Blue */
+    --text-main: #e2cfea;     /* Thistle (High contrast text) */
+    --text-secondary: #c0b0c7; /* Muted Thistle */
+    --header-bg: #20462e;     /* Dark Spruce */
+    --accent-1: #b4654a;      /* Cinnamon Wood */
+    --accent-2: #69995d;      /* Sage Green */
+    --border: rgba(226, 207, 234, 0.1);
+    --font-family: 'Inter', -apple-system, system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+}
+
+header#hero {
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--accent-1);
+}
+
+#name {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    margin: 0;
+    color: #ffffff; /* Brighter for the name */
+}
+
+#tagline {
+    font-size: 1.6rem;
+    color: var(--accent-2); /* Sage Green */
+    font-weight: 500;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.contact-info svg {
+    width: 16px;
+    height: 16px;
+    color: var(--accent-1); /* Cinnamon Wood icons */
+}
+
+.contact-info a {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-1);
+}
+
+section {
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background-color: var(--header-bg); /* Dark Spruce */
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 4px;
+}
+
+.job, .edu-item {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.job-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--accent-2); /* Sage Green */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.company {
+    font-weight: 700;
+    color: var(--accent-1); /* Cinnamon Wood */
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+}
+
+.highlights {
+    padding-left: 1.25rem;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.highlights li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.highlights li::marker {
+    color: var(--accent-1); /* Cinnamon Wood bullet points */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+}
+
+.skill-category h4 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    color: var(--accent-2); /* Sage Green */
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.skill-category p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    #name { font-size: 3rem; }
+    .job-header { flex-direction: column; gap: 0.25rem; }
+    body { padding: 2rem 1rem; }
+}

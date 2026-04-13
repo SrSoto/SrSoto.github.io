@@ -1,0 +1,176 @@
+{
+  "basics": {
+    "name": "Manuel Soto Jiménez",
+    "email": "manuel.sj.linares@gmail.com",
+    "phone": "662229805",
+    "location": {
+      "address": "Madrid, Spain"
+    },
+    "website": "https://www.linkedin.com/in/lolo-soto/"
+  },
+  "education": [
+    {
+      "institution": "Universidad Autónoma de Madrid",
+      "location": "Madrid, Spain",
+      "startDate": "2016-09",
+      "endDate": "2021-05",
+      "studyType": "B.Sc. in Computer Science & B.Sc. in Mathematics",
+      "gpa": "8.9 / 10"
+    },
+    {
+      "area": "Business Administration (MBA) in Technical Management of Data Science in Business",
+      "studyType": "Master",
+      "institution": "TECH Technological University",
+      "gpa": "9.1 / 10",
+      "startDate": "2023-09",
+      "endDate": "2024-06",
+      "location": "(Remote)"
+    }
+  ],
+  "work": [
+    {
+      "location": "Madrid (Remote)",
+      "position": "Data Engineer",
+      "website": "www.iic.uam.es",
+      "startDate": "2021-09",
+      "endDate": "2023-01",
+      "highlights": [
+      "Led backend development and core library evolution for an AML transactional platform, leveraging Python, Pandas, NumPy, Dask, AWS, and CI/CD to scale analysis from millions to billions of transactions.",
+      "Applied AI/NLP and advanced engineering practices to improve transaction screening and matching against watchlists, while taking on senior-level responsibilities through strong ownership, product knowledge, and consistent delivery."
+      ],
+      "company": "Instituto de Ingeniería del Conocimiento (IIC)"
+    },
+    {
+      "highlights": [
+        "(Note: Lynx Tech was founded from a branch of the IIC)",
+        "Designed and maintained clear, concise documentation using Mermaid diagrams, Markdown, and Confluence, ensuring accessibility and ease of understanding for both developers and stakeholders.",
+        "Continued tasks from IIC with a stronger focus on coordination and quality management, including testing, CI/CD, and DevOps.",
+        "Designed and developed APIs using OpenAPI and Python, while providing the necessary AWS infrastructure to ensure scalability and reliability.",
+        "Coordinated tasks, epics, and milestones for a team of 10 developers, ensuring timely delivery and adherence to project goals.",
+        "Designed and implemented ETL structures to handle millions of records, optimizing data flow and processing for large-scale data analysis.",
+        "Consistently received exceptional annual performance reviews, recognized for delivering high-quality results, meeting key objectives, and exceeding expectations."
+      ],
+      "company": "Lynx Tech (Santander Group)",
+      "website": "www.lynxtech.com",
+      "position": "Software Engineering Specialist & Technical Lead",
+      "location": "Madrid (Remote)",
+      "startDate": "2023-01",
+      "endDate": "2025-11"
+    },
+    {
+      "highlights": [
+        "Taught best practices in Python testing, focusing on tools such as unittest, pytest, nose, tox, and other relevant frameworks.",
+        "Instructed students on design patterns and anti-patterns for software quality assurance, emphasizing their application in real-world projects."
+      ],
+      "company": "TECH Technological University",
+      "position": "Software Quality Lecturer for Master’s Program",
+      "location": "(Remote)",
+      "startDate": "2023-01",
+      "endDate": "2025-06"
+    },
+    {
+      "company": "Lynx Tech (Santander Group)",
+      "position": "Head of Core Application",
+      "location": "Madrid (Remote)",
+      "website": "www.lynxtech.com",
+      "startDate": "2025-11",
+      "highlights": [
+"Lead and manage a cross-functional team of 15 engineers across backend, data, ML, DevOps, and architecture, fostering a culture of accountability, collaboration, and technical excellence.",
+"Drive end-to-end delivery in an Agile environment, balancing roadmap execution, stakeholder alignment, and technical prioritization to ensure consistent delivery of high-impact outcomes.",
+"Own key data and architectural decisions, with strong involvement in technical design, code quality, and the definition of engineering standards across the Core domain.",
+"Partner closely with clients to gather requirements, align expectations, and translate business needs into scalable technical solutions, including ETLs, databases, ML models, and LLM-based applications.",
+"Mentor, hire, and manage performance for team members while actively monitoring technical KPIs, delivery health, and platform quality across the section.",
+"Review the majority of Core code contributions to ensure maintainability, consistency, and alignment with architectural standards, despite no longer coding directly."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "keywords":[
+        "Spanish (native)",
+        "English (professional working proficiency)"
+      ],
+      "name": "Languages"
+    },
+    {
+      "level": "",
+      "keywords": [
+        "Python",
+        "C",
+        "SQL",
+        "Cython",
+        "Bash"
+      ],
+      "name": "Programming Languages"
+    },
+    {
+      "keywords": [
+        "AWS (EC2, Lambda, S3, Bedrock, Aurora, Athena, OpenSearch, Cloud Formation, IAM, SSM, etc.)"
+      ],
+      "name": "Cloud"
+    },
+    {
+      "keywords": [
+        "CI/CD",
+        "Gitlab CI",
+        "Docker",
+        "Twine",
+        "Pypi"
+      ],
+      "name": "DevOps"
+    },
+    {
+      "keywords": [
+        "ETL",
+        "Dask",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "Fuzzy search (rapidfuzz, Elasticsearch, ...)",
+        "Seaborn"
+      ],
+      "name": "Data Science"
+    },
+    {
+      "keywords": [
+        "LangChain",
+        "AWS Bedrock",
+        "MCP (Model Context Protocol)",
+        "Prompt Engineering",
+        "RAG (Retrieval-Augmented Generation)"
+      ],
+      "name": "LLM (Large Language Models)"
+    },
+    {
+      "keywords": [
+        "Scrum",
+        "Agile",
+        "Jira",
+        "Kanban",
+        "GitLab",
+        "Mermaid"
+      ],
+      "name": "Project Management"
+    },
+    {
+      "keywords": [
+        "unittest",
+        "pytest",
+        "nose2",
+        "mock",
+        "Selenium",
+        "Git Hooks",
+        "coverage",
+        "hypothesis"
+      ],
+      "name": "Quality Assurance"
+    }
+  ],
+  "awards": [
+    {
+      "summary": "Awarded for five consecutive years (2016-2021) due to exceptional academic performance",
+      "title": "Beca de Excelencia",
+      "awarder": "Community of Madrid"
+    }
+  ]
+}
