@@ -1,11 +1,12 @@
 :root {
     --bg-color: #494e5a;       /* Charcoal Blue */
-    --text-main: #e2cfea;     /* Thistle (High contrast text) */
+    --text-main: #e2cfea;     /* Thistle */
     --text-secondary: #c0b0c7; /* Muted Thistle */
     --header-bg: #20462e;     /* Dark Spruce */
     --accent-1: #b4654a;      /* Cinnamon Wood */
     --accent-2: #69995d;      /* Sage Green */
-    --border: rgba(226, 207, 234, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.03); /* Subtle glass effect */
+    --card-border: rgba(226, 207, 234, 0.1);
     --font-family: 'Inter', -apple-system, system-ui, sans-serif;
 }
 
@@ -27,8 +28,22 @@ body {
 
 header#hero {
     margin-bottom: 5rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid var(--accent-1);
+    padding: 3rem;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    position: relative;
+    overflow: hidden;
+}
+
+header#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-1);
 }
 
 #name {
@@ -36,12 +51,12 @@ header#hero {
     font-weight: 800;
     letter-spacing: -0.05em;
     margin: 0;
-    color: #ffffff; /* Brighter for the name */
+    color: #ffffff;
 }
 
 #tagline {
     font-size: 1.6rem;
-    color: var(--accent-2); /* Sage Green */
+    color: var(--accent-2);
     font-weight: 500;
     margin: 0.5rem 0 1.5rem;
 }
@@ -63,7 +78,7 @@ header#hero {
 .contact-info svg {
     width: 16px;
     height: 16px;
-    color: var(--accent-1); /* Cinnamon Wood icons */
+    color: var(--accent-1);
 }
 
 .contact-info a {
@@ -77,28 +92,46 @@ section {
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    background-color: var(--header-bg); /* Dark Spruce */
+    letter-spacing: 0.2em;
     color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    margin-bottom: 2.5rem;
-    display: inline-flex;
+    margin-bottom: 2rem;
+    display: flex;
     align-items: center;
-    gap: 0.75rem;
-    border-radius: 4px;
+    gap: 1rem;
 }
 
-.job, .edu-item {
-    margin-bottom: 4rem;
-    position: relative;
+h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--card-border);
+}
+
+h2 svg {
+    color: var(--accent-2);
+}
+
+/* Card Component */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    border-color: rgba(226, 207, 234, 0.3);
+    transform: translateY(-2px);
 }
 
 .job-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 0.5rem;
 }
@@ -111,57 +144,102 @@ h2 {
 }
 
 .date {
-    font-size: 0.9rem;
-    color: var(--accent-2); /* Sage Green */
-    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--accent-2);
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    background: rgba(105, 153, 93, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
 }
 
 .company {
-    font-weight: 700;
-    color: var(--accent-1); /* Cinnamon Wood */
-    margin-bottom: 1.25rem;
+    font-weight: 600;
+    color: var(--accent-1);
+    margin-bottom: 1.5rem;
     font-size: 1.1rem;
 }
 
 .highlights {
     padding-left: 1.25rem;
     margin: 0;
-    color: var(--text-main);
 }
 
 .highlights li {
     margin-bottom: 0.75rem;
-    position: relative;
+    color: var(--text-main);
 }
 
 .highlights li::marker {
-    color: var(--accent-1); /* Cinnamon Wood bullet points */
+    color: var(--accent-1);
 }
 
+/* Skills Grid in Cards */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
-.skill-category h4 {
-    margin: 0 0 0.75rem;
-    font-size: 1.1rem;
-    color: var(--accent-2); /* Sage Green */
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.5rem;
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
 }
 
-.skill-category p {
+.skill-card h4 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--accent-2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-card p {
     font-size: 0.95rem;
-    color: var(--text-main);
+    color: var(--text-secondary);
     margin: 0;
+    line-height: 1.4;
 }
+
+/* Award highlight */
+.award-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--header-bg);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Scroll Reveal Base State */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay for skill cards */
+.skills-grid .skill-card:nth-child(2) { transition-delay: 0.1s; }
+.skills-grid .skill-card:nth-child(3) { transition-delay: 0.2s; }
+.skills-grid .skill-card:nth-child(4) { transition-delay: 0.3s; }
 
 @media (max-width: 600px) {
-    #name { font-size: 3rem; }
-    .job-header { flex-direction: column; gap: 0.25rem; }
-    body { padding: 2rem 1rem; }
+    #name { font-size: 2.5rem; }
+    .job-header { flex-direction: column; gap: 1rem; }
+    body { padding: 1.5rem 1rem; }
+    .card { padding: 1.5rem; }
+    header#hero { padding: 1.5rem; }
 }
