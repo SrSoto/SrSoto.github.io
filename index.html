@@ -93,6 +93,30 @@
 
         </section>
 
+        <section id="milestones">
+            <h2 class="reveal"><i data-lucide="milestone"></i> Career Milestones</h2>
+            
+            <div class="card reveal">
+                <div class="job-header">
+                    <h3>High-Performance Data Ingestion Engine</h3>
+                    <span class="date">Performance Optimization</span>
+                </div>
+                <div class="company">10x Acceleration via Cython & Vectorization</div>
+                
+                <p>Architected a high-performance validation layer for transaction monitoring, refactoring legacy Pandas <code>.apply()</code> bottlenecks into a vectorized, Cython-based engine using custom Pandas ExtensionDtypes.</p>
+
+                <div class="chart-container">
+                    <iframe src="devs/01_data_cleaning_performance/plotly.html" title="Performance Comparison"></iframe>
+                </div>
+
+                <ul class="highlights" style="margin-top: 1.5rem;">
+                    <li><strong>Challenge:</strong> Scalability bottleneck in data ingestion due to Python's object-type overhead in critical validation paths.</li>
+                    <li><strong>Solution:</strong> Implemented specialized memory management and low-level C-extensions to bypass the Global Interpreter Lock (GIL) where possible.</li>
+                    <li><strong>Impact:</strong> Achieved a ~1,000% increase in throughput, dramatically reducing AWS compute costs and improving real-time monitoring capabilities.</li>
+                </ul>
+            </div>
+        </section>
+
         <section id="skills">
             <h2 class="reveal"><i data-lucide="code-2"></i> Technical Expertise</h2>
             <div class="skills-grid">

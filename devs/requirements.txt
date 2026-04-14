@@ -1,0 +1,5 @@
+narwhals==2.19.0
+packaging==26.0
+plotly==6.7.0
+setuptools==82.0.1
+wheel==0.46.3
