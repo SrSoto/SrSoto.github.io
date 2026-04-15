@@ -289,6 +289,47 @@ h2 svg {
     margin-top: 1rem;
 }
 
+/* Experience Timeline Group */
+.experience-timeline {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 3rem;
+    bottom: 3rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-1), var(--accent-2));
+    opacity: 0.4;
+}
+
+.experience-timeline .card {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.experience-timeline .card::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 3rem;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-1);
+    border: 3px solid var(--bg-color);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.experience-timeline .card:last-child {
+    margin-bottom: 0;
+}
+
 /* Scroll Reveal Base State */
 .reveal {
     opacity: 0;
