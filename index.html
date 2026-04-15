@@ -132,32 +132,37 @@
         <section id="milestones">
             <h2 class="reveal"><i data-lucide="milestone"></i> Career Milestones</h2>
             
-            <div class="card reveal">
-                <div class="job-header">
-                    <h3>High-Performance Data Ingestion Engine</h3>
-                    <span class="date">Performance Optimization</span>
-                </div>
-                <div class="company">10x Acceleration via Cython & Vectorization</div>
-                
-                <p>Architected a high-performance validation layer for transaction monitoring, refactoring legacy Pandas <code>.apply()</code> bottlenecks into a vectorized, Cython-based engine using custom Pandas ExtensionDtypes.</p>
+            <p class="reveal" style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1rem; text-align: right; letter-spacing: 0.1em; text-transform: uppercase;">
+                <i data-lucide="arrow-right-left" style="width: 14px; vertical-align: middle;"></i> Scroll horizontally to explore
+            </p>
 
-                <div class="chart-container">
-                    <iframe src="devs/01_data_cleaning_performance/plotly.html" title="Performance Comparison"></iframe>
+            <div class="milestones-carousel">
+                <div class="card reveal">
+                    <div class="job-header">
+                        <h3>High-Performance Data Ingestion Engine</h3>
+                        <span class="date">Performance Optimization</span>
+                    </div>
+                    <div class="company">10x Acceleration via Cython & Vectorization</div>
+                    
+                    <p>Architected a high-performance validation layer for transaction monitoring, refactoring legacy Pandas <code>.apply()</code> bottlenecks into a vectorized, Cython-based engine using custom Pandas ExtensionDtypes.</p>
+
+                    <div class="chart-container">
+                        <iframe src="devs/01_data_cleaning_performance/plotly.html" title="Performance Comparison"></iframe>
+                    </div>
+
+                    <ul class="highlights" style="margin-top: 1.5rem;">
+                        <li><strong>Challenge:</strong> Scalability bottleneck in data ingestion due to Python's object-type overhead in critical validation paths.</li>
+                        <li><strong>Solution:</strong> Implemented specialized memory management and low-level C-extensions to bypass the Global Interpreter Lock (GIL) where possible.</li>
+                        <li><strong>Impact:</strong> Achieved a ~1,000% increase in throughput, dramatically reducing AWS compute costs and improving real-time monitoring capabilities.</li>
+                    </ul>
                 </div>
 
-                <ul class="highlights" style="margin-top: 1.5rem;">
-                    <li><strong>Challenge:</strong> Scalability bottleneck in data ingestion due to Python's object-type overhead in critical validation paths.</li>
-                    <li><strong>Solution:</strong> Implemented specialized memory management and low-level C-extensions to bypass the Global Interpreter Lock (GIL) where possible.</li>
-                    <li><strong>Impact:</strong> Achieved a ~1,000% increase in throughput, dramatically reducing AWS compute costs and improving real-time monitoring capabilities.</li>
-                </ul>
-            </div>
-
-            <div class="card reveal">
-                <div class="job-header">
-                    <h3>Multitenant Architectural Evolution</h3>
-                    <span class="date">Strategic Leadership</span>
-                </div>
-                <div class="company">80% Infrastructure Efficiency & Global Scalability</div>
+                <div class="card reveal">
+                    <div class="job-header">
+                        <h3>Multitenant Architectural Evolution</h3>
+                        <span class="date">Strategic Leadership</span>
+                    </div>
+                    <div class="company">80% Infrastructure Efficiency & Global Scalability</div>
                 
                 <p>Managed the technical transition of the Core platform to a native multitenant architecture, enabling global banking entities to scale within a unified environment with strict data isolation.</p>
 

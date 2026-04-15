@@ -238,6 +238,44 @@ h2 svg {
     line-height: 1.4;
 }
 
+/* Career Milestones Carousel */
+.milestones-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1rem 0.5rem 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-1) transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+.milestones-carousel::-webkit-scrollbar {
+    height: 5px;
+}
+
+.milestones-carousel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.milestones-carousel::-webkit-scrollbar-thumb {
+    background: var(--accent-1);
+    border-radius: 10px;
+}
+
+.milestones-carousel .card {
+    flex: 0 0 100%; /* Show one full card at a time */
+    scroll-snap-align: center;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width: 850px) {
+    .milestones-carousel .card {
+        flex: 0 0 calc(100% - 4rem); /* On larger screens, show a hint of the next card */
+    }
+}
+
 /* Award highlight */
 .award-tag {
     display: inline-flex;
