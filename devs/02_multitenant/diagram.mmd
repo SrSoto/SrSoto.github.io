@@ -1,0 +1,25 @@
+flowchart TD
+    User1((fa:fa-user geo 1))
+    User2((fa:fa-user geo 2))
+    API[fa:fa-laptop API]
+    Aurora[fa:fa-database Aurora]
+    Opensearch[fa:fa-search OpenSearch]
+    DB1["fa:fa-table DB from geo 1"]
+    DB2["fa:fa-table DB from geo 2"]
+    Ind1["fa:fa-indent OS Index from geo 1"]
+    Ind2["fa:fa-indent OS Index from geo 2"]
+    CoreManager["fa:fa-cog" Core Manager]
+    Core1["fa:fa-server Core Task from geo 1"]
+    Core2["fa:fa-server Core Task from geo 2"]
+
+    User1 --> API
+    User2 --> API
+    API --> Aurora
+    API --> Opensearch
+    Aurora --> DB1
+    Aurora --> DB2
+    Opensearch --> Ind1
+    Opensearch --> Ind2
+    API --> CoreManager
+    CoreManager --> Core1
+    CoreManager --> Core2
