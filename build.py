@@ -10,6 +10,7 @@ def build():
         'devs/02_multitenant/card.html',
         'devs/03_wls_service_test/card.html',
         'devs/04_wls_model_refactor/card.html',
+        'devs/05_tm_team/card.html',
         'src/components/milestones_outro.html',
         'src/components/experience.html',
         'src/components/skills.html',

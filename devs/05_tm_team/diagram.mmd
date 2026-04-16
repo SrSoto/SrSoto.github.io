@@ -1,0 +1,39 @@
+flowchart TD 
+    subgraph Client & PO
+    Client1["fa:fa-users Clients"]
+    PO["fa:fa-user Product Owner"]
+    end
+    subgraph 1LoD
+    API["fa:fa-user Head of API"]
+    Core["fa:fa-star Head of Core (Me!)"]
+    Web["fa:fa-user Head of Web"]
+    end
+    subgraph 2LoD
+    Ingest["fa:fa-user 2LoD Ingest"]
+    RM["fa:fa-user 2LoD Rules and Models"]
+    end
+    subgraph Developing Team
+    Dev["fa:fa-users Developing Team"]
+    Dev1["..."]
+    Dev2["fa:fa-users Developing Team"]
+    end
+
+    Client1 --- PO
+    PO --- API
+    PO --- Core
+    PO --- Web
+    API --- Client1
+    Web --- Client1
+    Core --- Client1
+    Core --- Ingest
+    Core --- RM
+    Core --- Dev
+    Core --- Dev1
+    Core --- Dev2
+    Ingest --- RM
+    Ingest --- Dev
+    Ingest --- Dev1
+    Ingest --- Dev2
+    RM --- Dev
+    RM --- Dev1
+    RM --- Dev2
