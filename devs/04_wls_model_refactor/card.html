@@ -1,0 +1,24 @@
+                <div class="card reveal">
+                    <div class="job-header">
+                        <h3>NLP Model Refactor & Accuracy Optimization</h3>
+                        <span class="date">Machine Learning / NLP</span>
+                    </div>
+                    <div class="company">PyTorch Rebuild for 60% FP Reduction</div>
+                    
+                    <p>Re-engineered the core name-matching NLP model, transitioning from a legacy TensorFlow implementation to a high-performance PyTorch architecture optimized for sub-second watchlists validation.</p>
+
+                    <details class="card-details">
+                        <summary>View Model Performance Metrics</summary>
+                        <div class="details-content">
+                            <div class="chart-container">
+                                <iframe src="devs/04_wls_model_refactor/plotly.html" title="Confusion Matrix Comparison"></iframe>
+                            </div>
+
+                            <ul class="highlights" style="margin-top: 1.5rem;">
+                                <li><strong>Challenge:</strong> High False Positive rates (~8%) in legacy name-matching models leading to operational fatigue in manual reviews.</li>
+                                <li><strong>Solution:</strong> Rebuilt the model from scratch using PyTorch, implementing a more representative dataset specifically oriented to international sanctions lists.</li>
+                                <li><strong>Impact:</strong> Achieved a ~60% reduction in False Positives (from 8% to 3% in testing, 5% to 1% in production) while maintaining zero false negatives.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
