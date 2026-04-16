@@ -1,0 +1,24 @@
+flowchart LR
+    FI["fa:fa-fast-forward Test files ingestion"]
+    Req["fa:fa-envelope Test Requests Queue"]
+    subgraph Requests Workers
+    W1["Requests Worker"]
+    W2["..."]
+    W3["Requests Worker"]
+    end
+    subgraph Watchlists Realtime API
+    LB["Load Balancer"]
+    API1["API Instance"]
+    API2["..."]
+    API3["API Instance"]
+    end
+    FI --> Req
+    Req --> W1
+    Req --> W2
+    Req --> W3
+    W1 --> LB
+    W2 --> LB
+    W3 --> LB
+    LB --> API1
+    LB --> API2
+    LB --> API3
