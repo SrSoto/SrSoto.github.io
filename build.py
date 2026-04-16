@@ -13,6 +13,7 @@ def build():
         'devs/05_tm_team/card.html',
         'src/components/milestones_outro.html',
         'src/components/experience.html',
+        'src/components/about.html',
         'src/components/skills.html',
         'src/components/education.html',
         'src/components/scripts.html'
