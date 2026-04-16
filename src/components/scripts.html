@@ -1,0 +1,24 @@
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.15, // Reveal when 15% of the element is visible
+            rootMargin: '0px 0px -50px 0px' // Offset to trigger a bit later for better feel
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Once revealed, stop observing to keep performance high
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
